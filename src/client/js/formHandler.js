@@ -7,7 +7,7 @@ function handleSubmit(event) {
         formText
     }
     if (Client.checkForName(formText)) {
-        fetch('http://localhost:8081/userText', {
+        fetch('https://jokeralive.herokuapp.com/userText', {
             method: 'POST',
             credentials: 'same-origin',
             headers: {
