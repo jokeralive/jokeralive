@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors');
 const app = express() // Start up an instance of app
 const api_key = process.env.API_KEY;
-const port = process.env.PORT;
+const port = process.env.PORT || 8081;
 const fetch = require('node-fetch');
 
 app.use(cors());
