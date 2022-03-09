@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors');
 const app = express() // Start up an instance of app
 const api_key = process.env.API_KEY;
+const port = process.env.PORT;
 const fetch = require('node-fetch');
 
 app.use(cors());
@@ -19,8 +20,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static('dist'));
 
-
-const port = 8081;
 const server = app.listen(port, () => {
     console.log(`running on localhost: ${port}`);
 });
